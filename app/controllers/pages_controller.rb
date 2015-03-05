@@ -9,4 +9,7 @@ class PagesController < ApplicationController
 	def jobs
 	end
 
+	def sample
+	end
+
 end
