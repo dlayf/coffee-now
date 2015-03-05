@@ -1,27 +1,36 @@
+var zip;
+
+
 function main(){
 
 	console.log("ready to go!");
 
-	initialize();
 
+// Submit the zipcode on either button click or on "Enter"
+	$('.btn').click(function(){
+		console.log("Button Clicked!");
+		makeRequest();
+	});
 
-
-
+	$("input").keypress(function(event) {
+	    if (event.which == 13) {
+	        event.preventDefault();
+	        makeRequest();
+	    }
+	});
 
 
 };
 
+function makeRequest(){
 
-  function initialize() {
-        var mapOptions = {
-          center: { lat: 40.7127, lng: -74.0059},
-          zoom: 12
-        };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-      }
+	zip = $('#zipcode').val();
+	console.log("Zipcode: " + zip);
+	var terms = "coffeeshop+in+" + zip;
+	console.log("Full query: " + terms);
+	$('#zipcode').val("");
       
-
+}
 
 
 $(document).ready(main);
