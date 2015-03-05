@@ -3,3 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+body{
+	height: 100%;
+	width: 100%;
+}
+
+#map-canvas{
+	max-height: 50%;
+	max-width: 50%;
+}
