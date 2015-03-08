@@ -1,4 +1,4 @@
-var zip;
+/*var zip;
 var APIkey = "AIzaSyAbGKM9_wSmQWSh9th1ezcSFuSxnAo5dJA";
 
 var results;
@@ -26,18 +26,21 @@ function main(){
 };
 
 
-/* This method pulls the data from the "zipcode fields, concatinates it with our search term - 
+ This method pulls the data from the "zipcode fields, concatinates it with our search term - 
  "coffeeshop" - and the API key, and sends the request.
 
 
-*/
+
 
 
 function makeRequest(){
 
+
+
 	zip = $('#zipcode').val();
 	
-	var terms = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=coffeeshop+in+" + zip + "+&key=" + APIkey;
+	var terms = ("http://maps.googleapis.com/maps/api/place/textsearch/json?query=coffeeshop+in+" + zip + "+&key=" + APIkey);
+
 	console.log("Full query: " + terms);
 	$('#zipcode').val("");
 
@@ -45,12 +48,13 @@ function makeRequest(){
 	// this is the "send request" bit
       
 
-	results =  $.getJSON(terms, function(result){
-        $.each(result, function(i, field){
-            $("div").append(field + " ");
+	results = $.ajax({
+          url: terms,
+          dataType: 'json',
+          success: function() { alert('hello!'); },
+          error: function() { alert('boo!'); },
         });
-    });
-}
+};
 
 
-$(document).ready(main);
+$(document).ready(main);*/

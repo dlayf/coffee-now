@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+#JSON Gem
+gem 'json', '1.8.2'
+
+#HTTParty gem
+gem 'httparty'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
@@ -10,6 +15,8 @@ gem 'pg'
 # this thing will let us push to Heroku, maybe?
 gem 'rails_12factor', group: :production
 
+# and now we pray...
+gem 'rack-cors', :require => 'rack/cors'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -43,3 +50,4 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
