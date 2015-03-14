@@ -1,11 +1,17 @@
 <div class = "main">
 	<div class = "container">
-	
-			<form>
-			  <div class="form-group">
-			    <label for="exampleInputEmail1">Zipcode</label>
-			    <input type="number" class="form-control" id="zipcode" placeholder="Enter your zipcode:" maxlength="5">
-			    
+
+			    <%= form_tag do %>
+				  <label for="zipcode">Zipcode:</label>
+				  <%= text_field_tag 'Zipcode' %>
+				  <%= submit_tag "Submit" %>
+				  
+
+				<% end %>
+
+				<div>
+					
+				</div>
 
 
 
@@ -14,15 +20,15 @@
 				  <!--  -->
 				  </div>
 				</div>
+				<h3>The best coffee in <%= @zipcode %> is: </h3>
+
+				<br/>
+				
 				<p>Gon name: <span id = "gon-name" class = "gon-field"></span></p>
 				<p>Gon address: <span id = "gon-address" class = "gon-field"></span></p>
 				<p>Gon rating: <span id = "gon-rating" class = "gon-field"></span></p>
-				<p>Gon place id: <span id = "gon-place-id" class = "gon-field"></span></p>
-				<p>Gon win url:</p>
-				<p><span id = "gon-place-url" class = "gon-field"></span></p>
-			  <button class = "btn btn-default btn-lg" id = "main-button">Submit</button>
+				<p>Gon phone: <span id = "gon-phone" class = "gon-field"></span></p>
 
-			  <p>STATUS: <span id = "gon-status"></span></p>
 
 	</div>
 </div>

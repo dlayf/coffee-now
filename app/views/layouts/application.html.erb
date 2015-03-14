@@ -8,7 +8,15 @@
 
   <%= include_gon %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  
+<!-- 
+
+THIS MAY LEAD TO ERRORS FOR MARK & DAN
+javascript_include_tag 'application' -> changed from javascript_include_tag 'default'
+
+ -->
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
 </head>
@@ -24,9 +32,7 @@
 	<%= link_to "Sample", 'sample' %>
 </div>
 
-	
-	</script>
-  	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </body>
 </html>

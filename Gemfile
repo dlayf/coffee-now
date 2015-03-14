@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 #JSON Gem
 gem 'json', '1.8.2'
 
+
+gem 'pry' 
+
 #HTTParty gem
 gem 'httparty'
 

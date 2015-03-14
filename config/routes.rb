@@ -6,6 +6,7 @@ get '/home' => 'pages#home'
 get '/about' => 'pages#about'
 get '/jobs' => 'pages#jobs'
 get '/sample' => 'pages#sample'
+post '/sample' => 'pages#sample'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
