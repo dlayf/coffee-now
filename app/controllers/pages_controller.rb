@@ -21,6 +21,9 @@ class PagesController < ApplicationController
 
 		gon.url = request_url = base_url + @zipcode.to_s + "+&key=" + token_key
 		gon.win_photo_url = "http://i.imgur.com/KPrMqR8.jpg"
+		gon.win_name = win_name = "Perfect Codecademy Coffee"
+		gon.win_address= win_address = "49 West 27th St, New York, NY, 10001"
+		gon.win_rating = win_rating = "5.0"
 
 
 

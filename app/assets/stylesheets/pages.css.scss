@@ -16,6 +16,10 @@ body {
 	background-image: url('background-gray.jpg');
 }
 
+.clear {
+	clear: both;
+}
+
 /* HEADER DIV */
 
 .header {
@@ -77,6 +81,7 @@ body {
 	background-position: center;
 	opacity: 0.95; 
 	background-color: white;
+	padding: 0;
 }
 
 input.transparent-input { 
@@ -92,11 +97,23 @@ input.transparent-input {
 
 .main {
 	width: 514px; 
-	height: 380px;
+/*	height: 425px;*/
 	margin: 0 auto;
 	background-image: url('bg-module.png');
 	padding-top: 10px;
 	padding-left: 10px;
+	min-height: 100px;
+	overflow: hidden;
+}
+
+.main_pic {
+	text-align: center;
+}
+
+#winning-photo {
+	max-height: 274px;
+	margin: 0 auto;
+	text-align: center;
 }
 
 #title {
