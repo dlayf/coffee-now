@@ -1,34 +1,44 @@
-<div class = "main">
-	<div class = "container">
+<div class="header">
+    <h3>Hipster Coffee</h3>
+    <p>Good Coffee. Great People. Every City.</p>
+</div>
 
-			    <%= form_tag do %>
-				  <label for="zipcode">Zipcode:</label>
-				  <%= text_field_tag 'Zipcode' %>
-				  <%= submit_tag "Submit" %>
-				  
+<!-- <form>
 
+     <input type="text" class="form-control transparent-input" id="enter_zip" placeholder="Enter Zip Code Here">
+       <button type="submit" class="btn btn-default"></button>
+
+</form> -->
+
+
+<div class="zip">
+ 			<%= form_tag do %>
+				  <%= text_field_tag 'enter_zip', nil, class: "form-control transparent-input", placeholder: 'Enter Zipcode Here' %>
+				  <%= image_submit_tag("search-new.png", class: "btn btn-default") %>		  	
 				<% end %>
 
-				<div>
-					
-				</div>
+</div>
 
 
 
-			    <div class="row">
-				  <div class="col-md-6 col-md-offset-3">
-				  <!--  -->
-				  </div>
-				</div>
-				<h3>The best coffee in <%= @zipcode %> is: </h3>
+<div class="main">
+    <div class="main_pic"><%= link_to image_tag("venue-img.jpg") %></div>
+    <div id="title">
+        <h3 id="winning-title"></h3>
+        <p id="winning-address"></p>
+    </div>
+    <div id="rating">
+    	<p id = "winning-rating"></p>
+    </div>
+    <div class="divider"></div>
+<!--     <div id="review">
+        <h4>Featured Review</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div> -->
+</div>
 
-				<br/>
-				
-				<p>Gon name: <span id = "gon-name" class = "gon-field"></span></p>
-				<p>Gon address: <span id = "gon-address" class = "gon-field"></span></p>
-				<p>Gon rating: <span id = "gon-rating" class = "gon-field"></span></p>
-				<p>Gon phone: <span id = "gon-phone" class = "gon-field"></span></p>
-
-
-	</div>
+<div class="footer">
+    <div class="container">
+        <p>© 2015 MDM Interactive</p>
+    </div>
 </div>

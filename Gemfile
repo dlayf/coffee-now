@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 #JSON Gem
 gem 'json', '1.8.2'
 
+#pretty self-explanatory
+gem 'validates_zipcode'
 
 gem 'pry' 
 

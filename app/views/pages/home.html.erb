@@ -3,22 +3,32 @@
     <p>Good Coffee. Great People. Every City.</p>
 </div>
 
-<form>
- <div class="zip">
+<!-- <form>
+
      <input type="text" class="form-control transparent-input" id="enter_zip" placeholder="Enter Zip Code Here">
        <button type="submit" class="btn btn-default"></button>
- </div> 
-</form>
+
+</form> -->
+
+
+<div class="zip">
+ 			<%= form_tag do %>
+				  <%= text_field_tag 'enter_zip', nil, class: "form-control transparent-input", placeholder: 'Enter Zipcode Here' %>
+				  <%= image_submit_tag("search-new.png", class: "btn btn-default") %>		  	
+				<% end %>
+
+</div>
+
 
 
 <div class="main">
     <div class="main_pic"><%= link_to image_tag("venue-img.jpg") %></div>
     <div id="title">
-        <h3 id="winning-title">Culture Espresso Bar</h3>
-        <p id="winning-address">72 W 38th St, New York, NY 10018</p>
+        <h3 id="winning-title"></h3>
+        <p id="winning-address"></p>
     </div>
     <div id="rating">
-    	<p>4.2</p>
+    	<p id = "winning-rating"></p>
     </div>
     <div class="divider"></div>
 <!--     <div id="review">
