@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-root 'pages#home'
+root 'pages#sample'
 
 get '/home' => 'pages#home'
-post '/home' => 'pages#home'
+post '/home' => 'pages#sample'
 get '/about' => 'pages#about'
 get '/jobs' => 'pages#jobs'
 get '/sample' => 'pages#sample'
