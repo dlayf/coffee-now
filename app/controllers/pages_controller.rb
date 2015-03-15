@@ -20,7 +20,7 @@ class PagesController < ApplicationController
 		token_key = "AIzaSyAbGKM9_wSmQWSh9th1ezcSFuSxnAo5dJA"
 
 		gon.url = request_url = base_url + @zipcode.to_s + "+&key=" + token_key
-
+		gon.win_photo_url = "http://i.imgur.com/KPrMqR8.jpg"
 
 
 
