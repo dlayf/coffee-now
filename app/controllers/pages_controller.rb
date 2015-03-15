@@ -46,22 +46,12 @@ class PagesController < ApplicationController
 
 						if profile["rating"].to_f > win_rating.to_f
 							win_place_id = 	profile["place_id"] 
+							gon.win_name = win_name = profile["name"]
+							gon.win_address= win_address = profile["formatted_address"]
+							gon.win_rating = win_rating = profile["rating"]
 						end
 						
-					end	
-
-					win_place_url = win_place_url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" + win_place_id + "&key=" + token_key
-
-					gon.win_place_url = win_place_url
-					
-					#fetch winning location details
-					place_response = HTTParty.get(win_place_url)
-					winner = place_response["result"]
-
-					gon.win_name = win_name = winner["name"]
-					gon.win_address= win_address = winner["formatted_address"]
-					gon.win_rating = win_rating = winner["rating"]
-					gon.win_phone = win_phone = winner["formatted_phone_number"]
+					end						
 					
 				end
 			end
