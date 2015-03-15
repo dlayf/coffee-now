@@ -6,7 +6,12 @@ gem 'json', '1.8.2'
 #pretty self-explanatory
 gem 'validates_zipcode'
 
+#gem to fix errors
 gem 'pry' 
+
+#gem to get photos running smoothly
+gem 'activesupport-json_encoder', github: 'rails/activesupport-json_encoder'
+
 
 #HTTParty gem
 gem 'httparty'

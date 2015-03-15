@@ -49,6 +49,9 @@ class PagesController < ApplicationController
 							gon.win_name = win_name = profile["name"]
 							gon.win_address= win_address = profile["formatted_address"]
 							gon.win_rating = win_rating = profile["rating"]
+
+							win_photo_reference = profile["photos"][0]["photo_reference"]
+							gon.win_photo_url = win_photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + win_photo_reference + "&key=" + token_key
 						end
 						
 					end						

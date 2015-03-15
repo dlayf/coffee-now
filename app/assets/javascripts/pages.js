@@ -15,6 +15,7 @@ function main(){
 	$("#winning-address").text(gon.win_address);
 	$("#winning-rating").text(gon.win_rating);
 	$("#gon-phone").text(gon.win_phone);
+	$("#winning-photo").attr("src", gon.win_photo_url);
 
 
 

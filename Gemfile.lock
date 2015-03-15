@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/rails/activesupport-json_encoder.git
+  revision: f02fb52c02609b3157e9288e1502dc6a4fe3b1fd
+  specs:
+    activesupport-json_encoder (1.1.0)
+      activesupport (>= 4.1.0, < 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -144,6 +151,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  activesupport-json_encoder!
   coffee-rails (~> 4.0.0)
   gon
   httparty
